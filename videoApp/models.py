@@ -10,3 +10,12 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class VideoChunk(models.Model):
+    video_chunk = models.FileField(upload_to='chunks/')
+    manuscript = models.TextField()
+    
+    def __str__(self):
+        return self.video_chunk
+
